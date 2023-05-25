@@ -10,7 +10,7 @@ X = bbc_text.News_Headline
 y = bbc_text.category
 #splitting the data
 X_train, X_test, y_train, y_test = train_test_split(X, y, train_size = 0.6, random_state = 1)
-from genism.models import word2vec
+from gensim.models import word2vec
 vector = TfidfVectorizer(stop_words = 'english',lowercase=False)
 # fit the vectorizer on the training data
 vector.fit(X_train)
